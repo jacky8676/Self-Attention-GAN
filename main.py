@@ -1,7 +1,7 @@
 
 from parameter import *
 from trainer import Trainer
-# from tester import Tester
+from tester import Tester
 from data_loader import Data_Loader
 from torch.backends import cudnn
 from utils import make_folder
@@ -20,6 +20,7 @@ def main(config):
     make_folder(config.sample_path, config.version)
     make_folder(config.log_path, config.version)
     make_folder(config.attn_path, config.version)
+    make_folder(config.test_path, config.version)
 
 
     if config.train:
